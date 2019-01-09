@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CSR Assistant</string>
     <string name="textfield_label" />
+    <string name="csr_assistant">Menu Utama</string>
+    <string name="kategori">KATEGORI</string>
+    <string name="add_on">Add On</string>
+    <string name="todo">TODO</string>
 </resources>

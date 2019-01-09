@@ -8,39 +8,256 @@
     android:weightSum="10"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_weight="2"
+
+    <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@android:color/holo_red_dark">
-        
-        <TextView
-            android:id="@+id/textGrid"
-            android:text="CSR Assistant"
-            android:textSize="34sp"
-            android:textColor="@android:color/white"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/card_margin"
+            android:layout_marginBottom="-8dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/kategori"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
 
     <GridLayout
         android:columnCount="2"
         android:rowCount="3"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
-        android:layout_weight="8"
+        android:layout_weight="9"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="14dp">
 
         <!-- Column 1 Row 1 -->
+        <!-- Add-On -->
         <android.support.v7.widget.CardView
+            android:id="@+id/add_on"
+            android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            >
 
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="@dimen/card_margin"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:src="@drawable/add_on"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                
+                <TextView
+                    android:text="Add On"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2 Row 1 -->
+        <!-- Bill -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/bill"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="@dimen/card_margin"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:src="@drawable/bill"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Tagihan"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 1 Row 2 -->
+        <!--Upgrade Downgrade-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/up_down"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            >
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="@dimen/card_margin"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:src="@drawable/up_down"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Upgrade dan Downgrade"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2 Row 2 -->
+        <!-- Buka Isolir-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/unlock"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            >
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="@dimen/card_margin"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:src="@drawable/unlock"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Buka Isolir"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 1 Row 3 -->
+        <!--Kendala-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/problem"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            >
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="@dimen/card_margin"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:src="@drawable/problem"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Kendala atau Error"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
