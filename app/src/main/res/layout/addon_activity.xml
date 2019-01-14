@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/tambah_addon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btn_rounded"
+        android:text="Tambah Add On"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textAlignment="textStart"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:textAllCaps="false"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/cabut_addon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btn_rounded"
+        android:text="Cabut Add On"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textAlignment="textStart"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:textAllCaps="false"
+        />
+
+</LinearLayout>

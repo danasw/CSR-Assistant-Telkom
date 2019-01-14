@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AddOn.AddOnActivity">
+        </activity>
+        <activity android:name=".AddOn.TambahActivity">
+
+        </activity>
     </application>
 
 </manifest>

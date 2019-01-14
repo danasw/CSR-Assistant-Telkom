@@ -1,11 +1,13 @@
 package jogja.telkom.csrassistant;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+
+import jogja.telkom.csrassistant.AddOn.AddOnActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Add On Clicked",Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainActivity.this, AddOnActivity.class));
             }
         });
 
