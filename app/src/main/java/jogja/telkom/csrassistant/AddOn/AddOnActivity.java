@@ -24,7 +24,7 @@ public class AddOnActivity extends AppCompatActivity {
         tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddOnActivity.this,TambahActivity.class));
+                startActivity(new Intent(AddOnActivity.this,TambahAddOnActivity.class));
             }
         });
 
