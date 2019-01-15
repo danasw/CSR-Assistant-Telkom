@@ -23,8 +23,7 @@
         android:paddingRight="16dp"
         android:paddingBottom="8dp"
         android:paddingTop="8dp"
-        android:textAllCaps="false"
-        />
+        android:textAllCaps="false" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cabut_addon"
@@ -44,7 +43,6 @@
         android:paddingRight="16dp"
         android:paddingBottom="8dp"
         android:paddingTop="8dp"
-        android:textAllCaps="false"
-        />
+        android:textAllCaps="false" />
 
 </LinearLayout>

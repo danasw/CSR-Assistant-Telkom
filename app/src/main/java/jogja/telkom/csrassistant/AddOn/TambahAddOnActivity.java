@@ -19,7 +19,7 @@ public class TambahAddOnActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tambah_addon_activity);
+        setContentView(R.layout.activity_tambah_addon);
 
         List<Instruksi> instruksiList = new ArrayList<>();
 
