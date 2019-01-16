@@ -1,4 +1,4 @@
-package jogja.telkom.csrassistant.AddOn;
+package jogja.telkom.csrassistant.Adapter;
 
 public class Instruksi {
 

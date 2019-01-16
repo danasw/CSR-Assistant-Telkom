@@ -14,14 +14,20 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddOn.AddOnActivity">
-        </activity>
-        <activity android:name=".AddOn.TambahAddOnActivity">
-        </activity>
+        <activity android:name=".AddOn.AddOnActivity"/>
+        <activity android:name=".AddOn.TambahAddOnActivity"/>
+        <activity android:name=".AddOn.CabutAddOnActivity"/>
+        <activity android:name=".Upgrade.UpgradeActivity" />
+        <activity android:name=".Upgrade.SatuPaketUpgradeActivity" />
+        <activity android:name=".Upgrade.BedaPaketUpgradeActivity" />
+        <activity android:name=".Kendala.KendalaActivity" />
+        <activity android:name=".Isolir.IsolirActivity" />
+        <activity android:name=".Tagihan.TagihanActivity" />
+        <activity android:name=".Tagihan.TetapDitagihTagihanActivity" />
+        <activity android:name=".Tagihan.TidakSesuaiTagihanActivity" />
     </application>
 
 </manifest>

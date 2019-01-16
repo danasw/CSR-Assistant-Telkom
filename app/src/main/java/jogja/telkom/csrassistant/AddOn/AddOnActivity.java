@@ -3,7 +3,6 @@ package jogja.telkom.csrassistant.AddOn;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +22,7 @@ public class AddOnActivity extends AppCompatActivity {
                 startActivity(new Intent(AddOnActivity.this,TambahAddOnActivity.class)));
 
         cabut.setOnClickListener(v ->
-                Toast.makeText(AddOnActivity.this,"Add On Clicked",Toast.LENGTH_LONG).show());
+                startActivity(new Intent(AddOnActivity.this,CabutAddOnActivity.class)));
 
     }
 

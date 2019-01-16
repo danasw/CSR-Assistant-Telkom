@@ -2,11 +2,14 @@ package jogja.telkom.csrassistant;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import jogja.telkom.csrassistant.AddOn.AddOnActivity;
+import jogja.telkom.csrassistant.Isolir.IsolirActivity;
+import jogja.telkom.csrassistant.Kendala.KendalaActivity;
+import jogja.telkom.csrassistant.Tagihan.TagihanActivity;
+import jogja.telkom.csrassistant.Upgrade.UpgradeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,22 +30,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         bill.setOnClickListener(v -> {
-            Toast.makeText(MainActivity.this, "Tagihan Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, TagihanActivity.class));
         });
 
 
         upgrade.setOnClickListener(v -> {
-            Toast.makeText(MainActivity.this, "Upgrade dan Downgrade Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, UpgradeActivity.class));
         });
 
 
         unlock.setOnClickListener(v -> {
-            Toast.makeText(MainActivity.this, "Buka Isolir Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, IsolirActivity.class));
         });
 
 
         problem.setOnClickListener(v -> {
-            Toast.makeText(MainActivity.this, "Kendala dan Error Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, KendalaActivity.class));
         });
 
     }
