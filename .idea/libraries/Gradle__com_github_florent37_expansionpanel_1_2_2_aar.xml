@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.florent37:expansionpanel:1.2.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expansionpanel-1.2.2.aar/47ca3c67aeb24de88da4c5e1677839f7/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expansionpanel-1.2.2.aar/47ca3c67aeb24de88da4c5e1677839f7/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expansionpanel-1.2.2.aar/b03a031b3364cd915caa7d57cabf549b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expansionpanel-1.2.2.aar/b03a031b3364cd915caa7d57cabf549b/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
