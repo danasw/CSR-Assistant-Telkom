@@ -45,7 +45,7 @@ class KendalaActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \\\"LAYANAN\\\",\n" + " tekan Enter, Pilih SOLUTION_IPTC,IPTV - PAKET LAYANAN"
+            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \"LAYANAN\",\n" + " tekan Enter, Pilih SOLUTION_IPTC,IPTV - PAKET LAYANAN"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -74,9 +74,9 @@ class KendalaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kendala)
+        setContentView(R.layout.layout_recview)
         mContext = this@KendalaActivity
-        mRecyclerView = findViewById(R.id.recview_kendala)
+        mRecyclerView = findViewById(R.id.layout_recview)
         val recyclerDataAdapter = RecAdapter(dummyDataToPass)
         mRecyclerView!!.layoutManager = LinearLayoutManager(mContext)
         mRecyclerView!!.adapter = recyclerDataAdapter

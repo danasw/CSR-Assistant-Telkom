@@ -6,10 +6,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fafafa"
     android:orientation="vertical"
-    android:paddingBottom="16dp"
-    android:paddingEnd="16dp"
-    android:paddingLeft="16dp"
-    android:paddingStart="16dp">
+    android:paddingBottom="2dp"
+    android:paddingEnd="2dp"
+    android:paddingLeft="2dp"
+    android:paddingStart="2dp">
 
     <View
         android:id="@+id/item_divider"
@@ -20,14 +20,17 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
         app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="8dp"
         >
 
         <TextView
             android:id="@+id/item_instruksi"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingTop="4dp"
             android:paddingLeft="16dp"
             android:textColor="@android:color/white"
             android:textSize="28sp"

@@ -18,65 +18,68 @@ class IsolirActivity : AppCompatActivity() {
     private val dummyDataToPass: ArrayList<Instruksi>
         get() {
             val dataInstruksi = ArrayList<Instruksi>()
-            val childDataItems: ArrayList<ChildInstruksi>
+            var childDataItems: ArrayList<ChildInstruksi>
             val instruksi: Instruksi
             var childInstruksi: ChildInstruksi
             instruksi = Instruksi()
-            instruksi.instruksi = "3. BUKA NOSSA"
+            instruksi.instruksi = "CEK SISKA TOOL"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Buka Nossa dan Lihat Halaman Tiket Pelanggan"
+            childInstruksi.isiInstruksi = "- Periksa Nomor Jastel pelanggan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pergi ke Work Logs > Isi Summary dan Details "
+            childInstruksi.isiInstruksi = "- Periksa apakah tagihan sdah lunas, bila sudah maka bisa dilanjutkna untuk proses Buka Isolir"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses TAMBAH Add On XXXX dengan SC XXXXXXXX,\n" + " Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan "
+            childInstruksi.isiInstruksi = "-Pada Type Modifikasi pilih opsi DN, masukkan nomor DN (nomor telepon pelanggan), tekan enter atau tombol panah di sebelah kolom"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Save dengan menekan Icon Disket di bagian atas"
+            childInstruksi.isiInstruksi = "-tekan tab Permintaan > Buat"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pergi ke Tab Actual Resolution"
+            childInstruksi.isiInstruksi = "Akan muncul pop-up Pilih Operasi, ketikkan \"RT\" pada kolom yans tersedia, tekan enter tiga kali"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \\\"LAYANAN\\\",\n" + " tekan Enter, Pilih SOLUTION_IPTC,IPTV - PAKET LAYANAN"
+            childInstruksi.isiInstruksi = "-Isikan K-Contact pada kolom Comment dengan format sebagai berikut:BUKIS TAGIHAN LUNAS, tekan save"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Resolution isikan seperti pada Summary sebelumnya"
-            childDataItems.add(childInstruksi)
-
-            childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Save dengan menekan Icon Disket di bagian atas "
-            childDataItems.add(childInstruksi)
-
-            childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Take Ownership dengan menekan icon tangan memegang kertas"
-            childDataItems.add(childInstruksi)
-
-            childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Tekan icon Route Workflow (sebelah kiri icon Take Ownership)"
-            childDataItems.add(childInstruksi)
-
-            childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pilih Resolve Incident"
+            childInstruksi.isiInstruksi = "-Permintaan akan masuk dalam tab Permintaan > Daftar, salin NDEM perimintaan BUKIS"
             childDataItems.add(childInstruksi)
             instruksi.setChildInstruksis(childDataItems)
             dataInstruksi.add(instruksi)
+
+            instruksi.instruksi = "MOHON BANTUAN PS PERMINTAAN"
+            childDataItems = ArrayList()
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "-Mohon bantuan ke grup Permintaan Selain Cabut agar permintaan segera di-PS"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "-Tunggu sampai permintaan selesai, dapat dilihat melalui ISISKA"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "-Apabila pada kolom 'Jml Dossier Isolir Krn Tgkn' sudah bernilai 0, berarti isolir sudah dibuka"
+            childDataItems.add(childInstruksi)
+
+            childDataItems.add(childInstruksi)
+            instruksi.setChildInstruksis(childDataItems)
+            dataInstruksi.add(instruksi)
+
             return dataInstruksi
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_isolir)
+        setContentView(R.layout.layout_recview)
         mContext = this@IsolirActivity
-        mRecyclerView = findViewById(R.id.recview_isolir)
+        mRecyclerView = findViewById(R.id.layout_recview)
         val recyclerDataAdapter = RecAdapter(dummyDataToPass)
         mRecyclerView!!.layoutManager = LinearLayoutManager(mContext)
         mRecyclerView!!.adapter = recyclerDataAdapter

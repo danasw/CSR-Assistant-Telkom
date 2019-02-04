@@ -1,4 +1,4 @@
-package jogja.telkom.csrassistant.AddOn
+package jogja.telkom.csrassistant.Upgrade
 
 import android.content.Context
 import android.os.Bundle
@@ -9,9 +9,10 @@ import jogja.telkom.csrassistant.Adapter.ChildInstruksi
 import jogja.telkom.csrassistant.Adapter.Instruksi
 import jogja.telkom.csrassistant.Adapter.RecAdapter
 import jogja.telkom.csrassistant.R
-import java.util.*
+import java.util.ArrayList
 
-class TambahAddOnActivity : AppCompatActivity() {
+
+class DuaSatuActivity : AppCompatActivity() {
     private var mRecyclerView: RecyclerView? = null
     private var mContext: Context? = null
 
@@ -47,7 +48,7 @@ class TambahAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pilih Product > IPTV > USEE_HD > Centang > Check Feasibility. Jika Sukses > Next Step"
+            childInstruksi.isiInstruksi = "- Pilih Product > INTERNET > MIN SPEED 10M > Centang > Check Feasibility. Jika Sukses > Next Step"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -55,11 +56,11 @@ class TambahAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Format K-Contact: PL85962(KODE PL);NAMA PELANGGAN;CP;NO TIKET (Dari Nossa);ORDER;BY (NAMA PENGINPUT) *Semua Huruf Besar"
+            childInstruksi.isiInstruksi = "- Format K-Contact: PL85962(KODE PL);NAMA PELANGGAN;CP;NO TIKET;ORDER;BY (NAMA PENGINPUT) *Semua Huruf Besar"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Contoh: PL85962;PAK XXX;0812XXXXXXXX;INXXXXXXXX;TAMBAH ADD ON XXXX;BY XXX"
+            childInstruksi.isiInstruksi = "- Contoh: PL85962;PAK XXX;0812XXXXXXXX;INXXXXXXXX;MODIF 10MB NETIZEN 1;BY XXX"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -70,18 +71,18 @@ class TambahAddOnActivity : AppCompatActivity() {
 
 
             instruksi = Instruksi()
-            instruksi.instruksi = "2. PILIH PAKET"
+            instruksi.instruksi = "2. PENGISIAN DATA PELANGGAN"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pilih Paket UseeTV, Perangkat IPTV, dan Tagihan yang sesuai "
+            childInstruksi.isiInstruksi = "- Pada Data Pelanggan Pilih INTERNET > pilih Folder yang berisi kecepatan internet pelanggan saat ini dan Perangakt Modem ONT (Biasanya folder CS17 dan CS16)"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Add Ons, pilih salah satu Add Ons yang berhubungan dengan UseeTV sesuai keinginan pelanggan (USEETV ADD ON INDIHOME, ADD ON MINIPACK USEETV KHUSUS APARTEMENT, dll), " + "Pilih Add On yang tertera disebelahnya, sesuai dengan keinginan pelanggan > Tekan Add "
+            childInstruksi.isiInstruksi = "- Pilih paket yang sesuai, untuk biaya perangkat internet pilih yang 40 ribu"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Tekan Appointment > Tekan Search "
+            childInstruksi.isiInstruksi = "- Tekan Appointment > Tekan Search"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -119,7 +120,7 @@ class TambahAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses TAMBAH Add On XXXX dengan SC XXXXXXXX," + " Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan "
+            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses Modif XXXMB XXXX dengan SC XXXXXXXX, Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -131,7 +132,7 @@ class TambahAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \"LAYANAN\"," + " tekan Enter, Pilih SOLUTION_IPTC,IPTV - PAKET LAYANAN"
+            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \"migrasi\", tekan Enter, Pilih SOLUTION_INTERNET,INTERNET - MSAN,MIGRASI"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -155,15 +156,13 @@ class TambahAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
             instruksi.setChildInstruksis(childDataItems)
             dataInstruksi.add(instruksi)
-
-            //Akhir
             return dataInstruksi
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_recview)
-        mContext = this@TambahAddOnActivity
+        mContext = this@DuaSatuActivity
         mRecyclerView = findViewById(R.id.layout_recview)
         val recyclerDataAdapter = RecAdapter(dummyDataToPass)
         mRecyclerView!!.layoutManager = LinearLayoutManager(mContext)

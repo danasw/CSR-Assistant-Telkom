@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/satu_paket"
+        android:id="@+id/tiga_dua"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -14,7 +14,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/btn_rounded"
-        android:text="Dalam Satu Paket"
+        android:text="3P ke 2P"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:fontFamily="@font/roboto_regular"
@@ -26,7 +26,7 @@
         android:textAllCaps="false" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/beda_paket"
+        android:id="@+id/tiga_satu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -34,7 +34,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/btn_rounded"
-        android:text="Ke Paket Berbeda"
+        android:text="3P ke 1P"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:fontFamily="@font/roboto_regular"
@@ -46,7 +46,7 @@
         android:textAllCaps="false" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cabut_telepon"
+        android:id="@+id/dua_satu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -54,7 +54,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/btn_rounded"
-        android:text="Cabut Telepon"
+        android:text="2P ke 1P"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:fontFamily="@font/roboto_regular"

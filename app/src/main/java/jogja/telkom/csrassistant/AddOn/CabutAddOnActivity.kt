@@ -65,6 +65,8 @@ class CabutAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
             instruksi.setChildInstruksis(childDataItems)
             dataInstruksi.add(instruksi)
+
+            /*KEDUA*/
             instruksi = Instruksi()
             instruksi.instruksi = "2. PILIH ADD ON"
             childDataItems = ArrayList()
@@ -73,8 +75,8 @@ class CabutAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Add Ons, pilih salah satu Add Ons yang berhubungan dengan UseeTV sesuai keinginan pelanggan \n " +
-                    "(USEETV ADD ON INDIHOME, ADD ON MINIPACK USEETV KHUSUS APARTEMENT, dll),\n" +
+            childInstruksi.isiInstruksi = "- Pada Add Ons, pilih salah satu Add Ons yang berhubungan dengan UseeTV sesuai keinginan pelanggan " +
+                    "(USEETV ADD ON INDIHOME, ADD ON MINIPACK USEETV KHUSUS APARTEMENT, dll)," +
                     " Pilih Add On yang tertera disebelahnya, sesuai dengan keinginan pelanggan"
             childDataItems.add(childInstruksi)
 
@@ -87,7 +89,7 @@ class CabutAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Description ketikkan \\\"SUDAH PROSES\\\""
+            childInstruksi.isiInstruksi = "- Pada Description ketikkan \"SUDAH PROSES\""
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -103,6 +105,8 @@ class CabutAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
             instruksi.setChildInstruksis(childDataItems)
             dataInstruksi.add(instruksi)
+
+            /*KETIGA*/
             instruksi = Instruksi()
             instruksi.instruksi = "3. BUKA NOSSA"
             childDataItems = ArrayList()
@@ -115,7 +119,7 @@ class CabutAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses Cabut Add On XXXX dengan SC XXXXXXXX,\n" + " Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan "
+            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses Cabut Add On XXXX dengan SC XXXXXXXX." + " Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan "
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -127,7 +131,7 @@ class CabutAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \\\"LAYANAN\\\",\n" + " tekan Enter, Pilih SOLUTION_IPTV,IPTV - PAKET LAYANAN,PENCABUTAN LAYANAN - PAKET LAYANAN"
+            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \"LAYANAN\"," + " tekan Enter, Pilih SOLUTION_IPTV,IPTV - PAKET LAYANAN,PENCABUTAN LAYANAN - PAKET LAYANAN"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -151,14 +155,15 @@ class CabutAddOnActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
             instruksi.setChildInstruksis(childDataItems)
             dataInstruksi.add(instruksi)
+
             return dataInstruksi
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_addon_cabut)
+        setContentView(R.layout.layout_recview)
         mContext = this@CabutAddOnActivity
-        mRecyclerView = findViewById(R.id.recview_cabut)
+        mRecyclerView = findViewById(R.id.layout_recview)
         val recyclerDataAdapter = RecAdapter(dummyDataToPass)
         mRecyclerView!!.layoutManager = LinearLayoutManager(mContext)
         mRecyclerView!!.adapter = recyclerDataAdapter

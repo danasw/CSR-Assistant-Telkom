@@ -1,6 +1,8 @@
 package jogja.telkom.csrassistant.Adapter
 
 import android.content.Context
+import android.graphics.Color
+import android.graphics.Typeface
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -8,12 +10,10 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-
-import java.util.ArrayList
-
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import jogja.telkom.csrassistant.R
+import java.util.*
 
 class RecAdapter(private val instruksis: ArrayList<Instruksi>) : RecyclerView.Adapter<RecAdapter.MyViewHolder>() {
 
@@ -44,10 +44,10 @@ class RecAdapter(private val instruksis: ArrayList<Instruksi>) : RecyclerView.Ad
         return instruksis.size
     }
 
-    internal inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         private val context: Context
-        private val textView_instruksi: TextView
-        private val linearLayout_isiInstruksi: LinearLayout
+        val textView_instruksi: TextView
+        val linearLayout_isiInstruksi: LinearLayout
 
         init {
             context = itemView.context
@@ -59,12 +59,16 @@ class RecAdapter(private val instruksis: ArrayList<Instruksi>) : RecyclerView.Ad
                 val intMaxSizeTemp = instruksis[index].childDataItems!!.size
                 if (intMaxSizeTemp > intMaxNoOfChild) intMaxNoOfChild = intMaxSizeTemp
             }
+
             //SET TEXT FORMAT UNTUK ISI
             for (indexView in 0 until intMaxNoOfChild) {
                 val textView = TextView(context)
                 textView.id = indexView
-                textView.setPadding(16, 20, 0, 20)
+                textView.setPadding(16, 20, 16, 20)
                 textView.gravity = Gravity.LEFT
+                textView.textSize = 18F
+                textView.setTextColor(Color.BLACK)
+                textView.typeface = Typeface.createFromAsset(context.assets, "res/font/roboto_regular.ttf")
                 textView.background = ContextCompat.getDrawable(context, R.drawable.background_sub_module_text)
                 val layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
                 textView.setOnClickListener(this)

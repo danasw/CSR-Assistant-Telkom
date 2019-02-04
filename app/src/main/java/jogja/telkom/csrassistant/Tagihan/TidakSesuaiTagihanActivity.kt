@@ -18,54 +18,60 @@ class TidakSesuaiTagihanActivity : AppCompatActivity() {
     private val dummyDataToPass: ArrayList<Instruksi>
         get() {
             val dataInstruksi = ArrayList<Instruksi>()
-            val childDataItems: ArrayList<ChildInstruksi>
-            val instruksi: Instruksi
+            var childDataItems: ArrayList<ChildInstruksi>
+            var instruksi: Instruksi
             var childInstruksi: ChildInstruksi
+
             instruksi = Instruksi()
-            instruksi.instruksi = "3. BUKA NOSSA"
+            instruksi.instruksi = "CEK SISKA TOOL"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Buka Nossa dan Lihat Halaman Tiket Pelanggan"
+            childInstruksi.isiInstruksi = "- Periksa Nomor Jastel pelanggan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pergi ke Work Logs > Isi Summary dan Details "
+            childInstruksi.isiInstruksi = "- Periksa apakah ada paket yang ditambahkan yang sekiranya membuat tagihan pelanggan bertambah, biasanya Add On, pertambahan kecepatan, atau fitur lain"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses TAMBAH Add On XXXX dengan SC XXXXXXXX,\n" + " Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan "
+            childInstruksi.isiInstruksi = "- Apabila kesalahan tagihan akibat ketidaktahuan pelanggan terhadap pajak, langsung edukasi pelanggan dan tutup laporan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Save dengan menekan Icon Disket di bagian atas"
+            childInstruksi.isiInstruksi = "- Edukasi pelanggan (melalui telepon, WA, atau SMS) tentang hal yang membuat tagihan bertambah, dan tanyakan apakah masih berkenan untuk dicabut"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pergi ke Tab Actual Resolution"
+            childInstruksi.isiInstruksi = "- Bila berkenan cabut layanan sesuai prosedur, bila tidak tutup laporan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \\\"LAYANAN\\\",\n" + " tekan Enter, Pilih SOLUTION_IPTC,IPTV - PAKET LAYANAN"
+            childInstruksi.isiInstruksi = "- Lakukan koreksi agar bulan berikutnya pelanggan tidak ditagih lagi"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Resolution isikan seperti pada Summary sebelumnya"
+            childInstruksi.isiInstruksi = "- Informasikan kembali jika proses penjabutan sudah selesai (melalui WA atau SMS)"
+            childDataItems.add(childInstruksi)
+
+            childDataItems.add(childInstruksi)
+            instruksi.setChildInstruksis(childDataItems)
+            dataInstruksi.add(instruksi)
+
+            instruksi = Instruksi()
+            instruksi.instruksi = "TUTUP LAPORAN"
+            childDataItems = ArrayList()
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Kembali ke Nossa, isi Log bahwa fitur/paket yang tidak diinginkan sudah dicabut dan pelanggan sudah diedukasi"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Save dengan menekan Icon Disket di bagian atas "
+            childInstruksi.isiInstruksi = "- Pada Actual Resolution search 'Tagihan' dan pilih sesuai dengan fitur yang dicabut (Internet atau IPTV)"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Take Ownership dengan menekan icon tangan memegang kertas"
+            childInstruksi.isiInstruksi = "- Tekan tombol Take Ownership, lalu tekna tombol Route Workflow, pilih Resolve Incident"
             childDataItems.add(childInstruksi)
 
-            childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Tekan icon Route Workflow (sebelah kiri icon Take Ownership)"
-            childDataItems.add(childInstruksi)
-
-            childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pilih Resolve Incident"
             childDataItems.add(childInstruksi)
             instruksi.setChildInstruksis(childDataItems)
             dataInstruksi.add(instruksi)
@@ -74,9 +80,9 @@ class TidakSesuaiTagihanActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tagihan_tidak_sesuai)
+        setContentView(R.layout.layout_recview)
         mContext = this@TidakSesuaiTagihanActivity
-        mRecyclerView = findViewById(R.id.recview_tak_sesuai)
+        mRecyclerView = findViewById(R.id.layout_recview)
         val recyclerDataAdapter = RecAdapter(dummyDataToPass)
         mRecyclerView!!.layoutManager = LinearLayoutManager(mContext)
         mRecyclerView!!.adapter = recyclerDataAdapter

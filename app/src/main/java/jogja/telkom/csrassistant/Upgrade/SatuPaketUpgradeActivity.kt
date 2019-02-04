@@ -18,9 +18,95 @@ class SatuPaketUpgradeActivity : AppCompatActivity() {
     private val dummyDataToPass: ArrayList<Instruksi>
         get() {
             val dataInstruksi = ArrayList<Instruksi>()
-            val childDataItems: ArrayList<ChildInstruksi>
-            val instruksi: Instruksi
+            var childDataItems: ArrayList<ChildInstruksi>
+            var instruksi: Instruksi
             var childInstruksi: ChildInstruksi
+
+
+            instruksi = Instruksi()
+            instruksi.instruksi = "1. BUKA STARCLICK"
+            childDataItems = ArrayList()
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Buka Starclick pada https://starclick.telkom.co.id/noss_prod/"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Tools > Transaction > Masukkan Nomer Pelanggan (Internet/Telepon)"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Lalu Pilih Lakukan Pencarian Hingga Muncul Daftar Layanan yang Dimiliki Pelanggan"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Check Lokasi > Next Step"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Pilih Operation > Modification > Next Step"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Pilih Product > INTERNET > MIN SPEED 10M > Centang > Check Feasibility. Jika Sukses > Next Step"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Muncul Halaman Modif. Layanan > Isi Kolom-Kolom Berbintang Merah > Isi K-contact"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Format K-Contact: PL85962(KODE PL);NAMA PELANGGAN;CP;NO TIKET;ORDER;BY (NAMA PENGINPUT) *Semua Huruf Besar"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Contoh: PL85962;PAK XXX;0812XXXXXXXX;INXXXXXXXX;MODIF 10MB NETIZEN 1;BY XXX"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- NEXT"
+            childDataItems.add(childInstruksi)
+            instruksi.setChildInstruksis(childDataItems)
+            dataInstruksi.add(instruksi)
+
+
+            instruksi = Instruksi()
+            instruksi.instruksi = "2. PENGISIAN DATA PELANGGAN"
+            childDataItems = ArrayList()
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Pada Data Pelanggan Pilih INTERNET > pilih Folder yang berisi kecepatan internet pelanggan saat ini dan Perangakt Modem ONT (Biasanya folder CS17 dan CS16)"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Pilih paket yang sesuai, untuk biaya perangkat internet pilih yang 40 ribu"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Tekan Appointment > Tekan Search"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Pada Type Appointment pilih CALL BY PHONE"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Pada Description ketikkan \"SUDAH PROSES\""
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Pada Date Appointment, pilih tanggal paling atas "
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Submit > Appointment berhasil dibuat"
+            childDataItems.add(childInstruksi)
+
+            childInstruksi = ChildInstruksi()
+            childInstruksi.isiInstruksi = "- Submit > Order berhasil dibuat, output berupa Nomor SC, Copy Nomor SC "
+            childDataItems.add(childInstruksi)
+            instruksi.setChildInstruksis(childDataItems)
+            dataInstruksi.add(instruksi)
+
+
             instruksi = Instruksi()
             instruksi.instruksi = "3. BUKA NOSSA"
             childDataItems = ArrayList()
@@ -33,7 +119,7 @@ class SatuPaketUpgradeActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses TAMBAH Add On XXXX dengan SC XXXXXXXX,\n" + " Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan "
+            childInstruksi.isiInstruksi = "- Contoh Summary: Sudah Proses Modif XXXMB XXXX dengan SC XXXXXXXX, Details boleh diisi sama dengan Summary apabila tidak ada informasi tambahan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -45,7 +131,7 @@ class SatuPaketUpgradeActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \\\"LAYANAN\\\",\n" + " tekan Enter, Pilih SOLUTION_IPTC,IPTV - PAKET LAYANAN"
+            childInstruksi.isiInstruksi = "- Pada Actual Solution, tekan icon kaca pembesar, pada Decription ketik \"migrasi\", tekan Enter, Pilih SOLUTION_INTERNET,INTERNET - MSAN,MIGRASI"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -74,9 +160,9 @@ class SatuPaketUpgradeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_upgrade_sama)
+        setContentView(R.layout.layout_recview)
         mContext = this@SatuPaketUpgradeActivity
-        mRecyclerView = findViewById(R.id.recview_sama)
+        mRecyclerView = findViewById(R.id.layout_recview)
         val recyclerDataAdapter = RecAdapter(dummyDataToPass)
         mRecyclerView!!.layoutManager = LinearLayoutManager(mContext)
         mRecyclerView!!.adapter = recyclerDataAdapter
