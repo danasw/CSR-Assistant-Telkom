@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CSR-Assistant-Telkom.iml" filepath="$PROJECT_DIR$/CSR-Assistant-Telkom.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/justifiedTextView/justifiedTextView.iml" filepath="$PROJECT_DIR$/justifiedTextView/justifiedTextView.iml" />
     </modules>
   </component>
 </project>
