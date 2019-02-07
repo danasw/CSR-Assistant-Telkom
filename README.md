@@ -1,2 +1,2 @@
 CSR-Assistant-Telkom
-http://bit.ly/csrAssistance
+http://bit.ly/ProyekTelkom
