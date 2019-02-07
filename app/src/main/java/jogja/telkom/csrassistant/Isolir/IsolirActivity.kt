@@ -19,25 +19,26 @@ class IsolirActivity : AppCompatActivity() {
         get() {
             val dataInstruksi = ArrayList<Instruksi>()
             var childDataItems: ArrayList<ChildInstruksi>
-            val instruksi: Instruksi
+            var instruksi: Instruksi
             var childInstruksi: ChildInstruksi
+
             instruksi = Instruksi()
             instruksi.instruksi = "CEK SISKA TOOL"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Periksa Nomor Jastel pelanggan"
+            childInstruksi.isiInstruksi = "Periksa Nomor Jastel pelanggan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Periksa apakah tagihan sdah lunas, bila sudah maka bisa dilanjutkna untuk proses Buka Isolir"
+            childInstruksi.isiInstruksi = "Periksa apakah tagihan sdah lunas, bila sudah maka bisa dilanjutkna untuk proses Buka Isolir"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "-Pada Type Modifikasi pilih opsi DN, masukkan nomor DN (nomor telepon pelanggan), tekan enter atau tombol panah di sebelah kolom"
+            childInstruksi.isiInstruksi = "Pada Type Modifikasi pilih opsi DN, masukkan nomor DN (nomor telepon pelanggan), tekan enter atau tombol panah di sebelah kolom"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "-tekan tab Permintaan > Buat"
+            childInstruksi.isiInstruksi = "Tekan tab Permintaan > Buat"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
@@ -45,27 +46,28 @@ class IsolirActivity : AppCompatActivity() {
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "-Isikan K-Contact pada kolom Comment dengan format sebagai berikut:BUKIS TAGIHAN LUNAS, tekan save"
+            childInstruksi.isiInstruksi = "Isikan K-Contact pada kolom Comment dengan format sebagai berikut:BUKIS TAGIHAN LUNAS, tekan save"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "-Permintaan akan masuk dalam tab Permintaan > Daftar, salin NDEM perimintaan BUKIS"
+            childInstruksi.isiInstruksi = "Permintaan akan masuk dalam tab Permintaan > Daftar, salin NDEM perimintaan BUKIS"
             childDataItems.add(childInstruksi)
             instruksi.setChildInstruksis(childDataItems)
             dataInstruksi.add(instruksi)
 
+            instruksi = Instruksi()
             instruksi.instruksi = "MOHON BANTUAN PS PERMINTAAN"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "-Mohon bantuan ke grup Permintaan Selain Cabut agar permintaan segera di-PS"
+            childInstruksi.isiInstruksi = "Mohon bantuan ke grup Permintaan Selain Cabut agar permintaan segera di-PS"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "-Tunggu sampai permintaan selesai, dapat dilihat melalui ISISKA"
+            childInstruksi.isiInstruksi = "Tunggu sampai permintaan selesai, dapat dilihat melalui ISISKA"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "-Apabila pada kolom 'Jml Dossier Isolir Krn Tgkn' sudah bernilai 0, berarti isolir sudah dibuka"
+            childInstruksi.isiInstruksi = "Apabila pada kolom 'Jml Dossier Isolir Krn Tgkn' sudah bernilai 0, berarti isolir sudah dibuka"
             childDataItems.add(childInstruksi)
 
             childDataItems.add(childInstruksi)

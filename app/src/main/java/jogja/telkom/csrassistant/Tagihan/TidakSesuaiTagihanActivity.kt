@@ -26,31 +26,31 @@ class TidakSesuaiTagihanActivity : AppCompatActivity() {
             instruksi.instruksi = "CEK SISKA TOOL"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Periksa Nomor Jastel pelanggan"
+            childInstruksi.isiInstruksi = "Periksa Nomor Jastel pelanggan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Periksa apakah ada paket yang ditambahkan yang sekiranya membuat tagihan pelanggan bertambah, biasanya Add On, pertambahan kecepatan, atau fitur lain"
+            childInstruksi.isiInstruksi = "Periksa apakah ada paket yang ditambahkan yang sekiranya membuat tagihan pelanggan bertambah, biasanya Add On, pertambahan kecepatan, atau fitur lain"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Apabila kesalahan tagihan akibat ketidaktahuan pelanggan terhadap pajak, langsung edukasi pelanggan dan tutup laporan"
+            childInstruksi.isiInstruksi = "Apabila kesalahan tagihan akibat ketidaktahuan pelanggan terhadap pajak, langsung edukasi pelanggan dan tutup laporan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Edukasi pelanggan (melalui telepon, WA, atau SMS) tentang hal yang membuat tagihan bertambah, dan tanyakan apakah masih berkenan untuk dicabut"
+            childInstruksi.isiInstruksi = "Edukasi pelanggan (melalui telepon, WA, atau SMS) tentang hal yang membuat tagihan bertambah, dan tanyakan apakah masih berkenan untuk dicabut"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Bila berkenan cabut layanan sesuai prosedur, bila tidak tutup laporan"
+            childInstruksi.isiInstruksi = "Bila berkenan cabut layanan sesuai prosedur, bila tidak tutup laporan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Lakukan koreksi agar bulan berikutnya pelanggan tidak ditagih lagi"
+            childInstruksi.isiInstruksi = "Lakukan koreksi agar bulan berikutnya pelanggan tidak ditagih lagi"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Informasikan kembali jika proses penjabutan sudah selesai (melalui WA atau SMS)"
+            childInstruksi.isiInstruksi = "Informasikan kembali jika proses penjabutan sudah selesai (melalui WA atau SMS)"
             childDataItems.add(childInstruksi)
 
             childDataItems.add(childInstruksi)
@@ -61,15 +61,15 @@ class TidakSesuaiTagihanActivity : AppCompatActivity() {
             instruksi.instruksi = "TUTUP LAPORAN"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Kembali ke Nossa, isi Log bahwa fitur/paket yang tidak diinginkan sudah dicabut dan pelanggan sudah diedukasi"
+            childInstruksi.isiInstruksi = "Kembali ke Nossa, isi Log bahwa fitur/paket yang tidak diinginkan sudah dicabut dan pelanggan sudah diedukasi"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Resolution search 'Tagihan' dan pilih sesuai dengan fitur yang dicabut (Internet atau IPTV)"
+            childInstruksi.isiInstruksi = "Pada Actual Resolution search 'Tagihan' dan pilih sesuai dengan fitur yang dicabut (Internet atau IPTV)"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Tekan tombol Take Ownership, lalu tekna tombol Route Workflow, pilih Resolve Incident"
+            childInstruksi.isiInstruksi = "Tekan tombol Take Ownership, lalu tekna tombol Route Workflow, pilih Resolve Incident"
             childDataItems.add(childInstruksi)
 
             childDataItems.add(childInstruksi)

@@ -26,27 +26,27 @@ class TetapDitagihTagihanActivity : AppCompatActivity() {
             instruksi.instruksi = "PERIKSA KETERANGAN TICKET"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Periksa apakah pelanggan sudah benar benar melakukan pencabutan melalui Data Churn pada Google Sheets, search nomor pelanggan"
+            childInstruksi.isiInstruksi = "Periksa apakah pelanggan sudah benar benar melakukan pencabutan melalui Data Churn pada Google Sheets, search nomor pelanggan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Jika ditemukan, artinya pelanggan benar sudah melakukan pencabutan. Periksa apakah pelanggan sudah mengembalikan perangkat dan melunasi tegihan berjalan (apabila belum, edukasi pelanggan untuk melunasi atau mengembalikan alat)"
+            childInstruksi.isiInstruksi = "Jika ditemukan, artinya pelanggan benar sudah melakukan pencabutan. Periksa apakah pelanggan sudah mengembalikan perangkat dan melunasi tegihan berjalan (apabila belum, edukasi pelanggan untuk melunasi atau mengembalikan alat)"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Tagihan berjalan ada apabila ada penggunaan layanan sebelum pencabutan"
+            childInstruksi.isiInstruksi = "Tagihan berjalan ada apabila ada penggunaan layanan sebelum pencabutan"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Setelah data sesuai, lakukan koreksi tagihan agar pelanggan tidka lagi ditagih"
+            childInstruksi.isiInstruksi = "Setelah data sesuai, lakukan koreksi tagihan agar pelanggan tidka lagi ditagih"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Lakukan koreksi agar bulan berikutnya pelanggan tidak ditagih lagi"
+            childInstruksi.isiInstruksi = "Lakukan koreksi agar bulan berikutnya pelanggan tidak ditagih lagi"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Informasikan kembali jika proses pengkoreksian sudah selesai (melalui WA atau SMS)"
+            childInstruksi.isiInstruksi = "Informasikan kembali jika proses pengkoreksian sudah selesai (melalui WA atau SMS)"
             childDataItems.add(childInstruksi)
 
             childDataItems.add(childInstruksi)
@@ -57,15 +57,15 @@ class TetapDitagihTagihanActivity : AppCompatActivity() {
             instruksi.instruksi = "TUTUP LAPORAN"
             childDataItems = ArrayList()
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Kembali ke Nossa, isi Log bahwa bahwa tagihan sudah dikoreksi"
+            childInstruksi.isiInstruksi = "Kembali ke Nossa, isi Log bahwa bahwa tagihan sudah dikoreksi"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Pada Actual Resolution search 'Tagihan' dan pilih Internet atau IPTV"
+            childInstruksi.isiInstruksi = "Pada Actual Resolution search 'Tagihan' dan pilih Internet atau IPTV"
             childDataItems.add(childInstruksi)
 
             childInstruksi = ChildInstruksi()
-            childInstruksi.isiInstruksi = "- Tekan tombol Take Ownership, lalu tekna tombol Route Workflow, pilih Resolve Incident"
+            childInstruksi.isiInstruksi = "Tekan tombol Take Ownership, lalu tekna tombol Route Workflow, pilih Resolve Incident"
             childDataItems.add(childInstruksi)
 
             childDataItems.add(childInstruksi)

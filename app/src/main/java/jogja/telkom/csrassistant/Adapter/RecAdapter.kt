@@ -3,13 +3,15 @@ package jogja.telkom.csrassistant.Adapter
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
+import android.os.Build
+import android.text.Layout.JUSTIFICATION_MODE_INTER_WORD
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import jogja.telkom.csrassistant.R
@@ -44,6 +46,7 @@ class RecAdapter(private val instruksis: ArrayList<Instruksi>) : RecyclerView.Ad
         return instruksis.size
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         private val context: Context
         val textView_instruksi: TextView
@@ -64,8 +67,11 @@ class RecAdapter(private val instruksis: ArrayList<Instruksi>) : RecyclerView.Ad
             for (indexView in 0 until intMaxNoOfChild) {
                 val textView = TextView(context)
                 textView.id = indexView
+                textView.minHeight = 180
                 textView.setPadding(16, 20, 16, 20)
-                textView.gravity = Gravity.LEFT
+                //textView.gravity = Gravity.LEFT
+                textView.gravity = Gravity.CENTER_VERTICAL
+                textView.justificationMode = JUSTIFICATION_MODE_INTER_WORD
                 textView.textSize = 18F
                 textView.setTextColor(Color.BLACK)
                 textView.typeface = Typeface.createFromAsset(context.assets, "res/font/roboto_regular.ttf")
@@ -84,9 +90,6 @@ class RecAdapter(private val instruksis: ArrayList<Instruksi>) : RecyclerView.Ad
                 } else {
                     linearLayout_isiInstruksi.visibility = View.VISIBLE
                 }
-            } else {
-                val textViewClicked = view as TextView
-                Toast.makeText(context, "" + textViewClicked.text.toString(), Toast.LENGTH_SHORT).show()
             }
         }
     }
